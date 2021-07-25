@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Tunz</title>
+  <title>Tunz | Admin</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="public/backend/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="public/backend/css/vendor.bundle.base.css">
@@ -16,7 +16,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="public/backend/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="public/backend/images/favicon.png">
+  <link rel="shortcut icon" href="public/backendClient/images/favicon-32x32.png">
 
 </head>
 
@@ -24,35 +24,35 @@
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-      <a class="navbar-brand brand-logo" href="http://localhost:8080/php27.zent/nhom/Bai2/index.php?admin=admin&mod=admin&act=admin"><img src="public/backend/fonts/logo.jpg" alt="logo"></a>
-      <a class="navbar-brand brand-logo-mini" href="http://localhost:8080/php27.zent/nhom/Bai2/index.php?admin=admin&mod=admin&act=admin"><img src="public/backend/fonts/logo-mini.jpg" alt="logo"></a>
-    </div>
-    <div class="navbar-menu-wrapper d-flex align-items-center">
-      <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="http://localhost:8080/php27.zent/nhom/Bai2/index.php?admin=admin&mod=admin&act=admin"><img src="public/backend/fonts/logo.jpg" alt="logo"></a>
+        <a class="navbar-brand brand-logo-mini" href="http://localhost:8080/php27.zent/nhom/Bai2/index.php?admin=admin&mod=admin&act=admin"><img src="public/backend/fonts/logo-mini.jpg" alt="logo"></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
           <span class="mdi mdi-menu"></span>
-      </button>
-          
-      <ul class="navbar-nav navbar-nav-right">
-        
-        <li class="nav-item nav-profile dropdown mr-0 mr-sm-2">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-            <img src="<?= "public/uploads/".$_SESSION['auth']['avatar'] ?>" alt="profile">
-            <span class="nav-profile-name"><?=$_SESSION['auth']['name']?></span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-            <a href="?admin=auth&mod=logout&act=logout" class="dropdown-item">
-              <i class="mdi mdi-logout text-primary"></i>
-              Logout
+        </button>
+
+        <ul class="navbar-nav navbar-nav-right">
+
+          <li class="nav-item nav-profile dropdown mr-0 mr-sm-2">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="<?= "public/uploads/".$_SESSION['auth']['avatar'] ?>" alt="profile">
+              <span class="nav-profile-name"><?=$_SESSION['auth']['name']?></span>
             </a>
-          </div>
-        </li>
-      </ul>
-      <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-        <span class="mdi mdi-menu"></span>
-      </button>
-    </div>
-  </nav>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="?admin=auth&mod=logout&act=logout" class="dropdown-item">
+                <i class="mdi mdi-logout text-primary"></i>
+                Đăng Xuất
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:../../partials/_settings-panel.html -->
@@ -240,15 +240,17 @@
               <span class="menu-title">Tables</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="tables">
+            <div class="" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="?admin=admin&mod=post&act=list">Posts</a></li>
-                <li class="nav-item"> <a class="nav-link" href="?admin=admin&mod=user&act=list" <?php if ($_SESSION['auth']['permission'] == 0 ) {
-                  echo 'style="display: none;"';
-                } ?>>User</a></li>
-                <li class="nav-item"> <a class="nav-link" href="?admin=admin&mod=singer&act=list">Singer</a></li>
-                <li class="nav-item"> <a class="nav-link" href="?admin=admin&mod=category&act=list">Category</a></li>
-                <li class="nav-item"> <a class="nav-link" href="?admin=admin&mod=article&act=list">Article</a></li>
+                <li class="nav-item"> <a class="nav-link" href="?admin=admin&mod=post&act=list">List nhạc</a></li>
+                <li class="nav-item">
+                  <?php if ($_SESSION['auth']['permission'] == 1 ) {
+                    echo '<a class="nav-link" href="?admin=admin&mod=user&act=list">Người dùng</a>';
+                  } ?>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="?admin=admin&mod=singer&act=list">Nghệ sĩ</a></li>
+                <li class="nav-item"> <a class="nav-link" href="?admin=admin&mod=category&act=list">Danh Mục</a></li>
+                <li class="nav-item"> <a class="nav-link" href="?admin=admin&mod=article&act=list">Bài viết</a></li>
               </ul>
             </div>
           </li>

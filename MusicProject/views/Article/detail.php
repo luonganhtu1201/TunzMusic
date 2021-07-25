@@ -3,7 +3,7 @@
         <div class="content-wrapper">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Detail Category ---</h4>
+              <h4 class="card-title">Chi tiết ---</h4>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
@@ -11,16 +11,14 @@
 			 		<table class="table text-center">
 			 			<thead>
 			                <th>ID</th>
-			                <th>Title</th>
-			                <th>Slug</th>
+			                <th>Tiêu đề</th>
 			                <th>Thumbnail</th>
-			                <th>Content</th>
-			                <th>Created at</th>
+			                <th>Nội dung</th>
+			                <th>Ngày tạo</th>
 			            </thead>
 			 			<tr>
 			 				<td><?= $article['id'] ?></td>
 			 				<td><?= $article['title'] ?></td>
-			 				<td><?= $article['slug'] ?></td>
 			 				<td><?= $article['thumbnail'] ?></td>
 			 				<td><?= $article['content'] ?></td>
 			 				<td><?= $article['created_at'] ?></td>

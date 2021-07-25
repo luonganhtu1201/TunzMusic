@@ -8,8 +8,8 @@ require_once('headerClient.php');
 			<!-- breadcrumb -->
 			<div class="col-12">
 				<ul class="breadcrumb">
-					<li class="breadcrumb__item"><a href="index.html">Home</a></li>
-					<li class="breadcrumb__item breadcrumb__item--active">Artists</li>
+					<li class="breadcrumb__item"><a href="?admin=client&mod=client&act=client">Trang chủ</a></li>
+					<li class="breadcrumb__item breadcrumb__item--active">Nghệ sĩ</li>
 				</ul>
 			</div>
 			<!-- end breadcrumb -->
@@ -17,7 +17,7 @@ require_once('headerClient.php');
 			<!-- title -->
 			<div class="col-12">
 				<div class="main__title main__title--page">
-					<h1>Artists</h1>
+					<h1>Nghệ sĩ</h1>
 				</div>
 			</div>
 			<!-- end title -->
@@ -50,7 +50,7 @@ require_once('headerClient.php');
 			<!-- title -->
 			<div class="col-12">
 				<div class="main__title">
-					<h2>Upcoming Events</h2>
+					<h2>Sự Kiện mới</h2>
 				</div>
 			</div>
 			<!-- end title -->
@@ -67,7 +67,7 @@ require_once('headerClient.php');
 					</a>
 
 					<div class="post__content">
-						<a href="#" class="post__category">Music</a>
+						<b class="post__category">Music</b>
 						<h3 class="post__title"><a href="?admin=client&mod=client&act=article&id=<?=$art['id']?>"><?=$art['title']?></a></h3>
 					</div>
 				</div>

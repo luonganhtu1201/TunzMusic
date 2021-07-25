@@ -1,4 +1,4 @@
-<footer class="footer">
+        <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021 <a href="https://www.bootstrapdash.com/" target="_blank">Tunz</a>. All rights reserved.</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">From Tunz with<i class="mdi mdi-heart text-danger"></i></span>
@@ -24,6 +24,10 @@
   <script src="public/backend/js/template.js"></script>
   <script src="public/backend/js/settings.js"></script>
   <script src="public/backend/js/todolist.js"></script>
+        <script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'editor' );
+        </script>
   <!-- endinject -->
   <!-- Custom js for this page-->
   <script src="public/backend/js/data-table.js"></script>

@@ -3,7 +3,7 @@
         <div class="content-wrapper">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Update Post ---</h4>
+              <h4 class="card-title">Cập nhật ---</h4>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
@@ -15,19 +15,21 @@
                             <input type="text" class="form-control" id="" placeholder="" name="id" value="<?= $post['id']?>" disabled>
                         </div>
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>Tên</label>
                             <input type="text" class="form-control" id="" placeholder="" name="name" value="<?= $post['name']?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Description</label>
+                            <label>Mô tả</label>
                             <input type="text" class="form-control" id="" placeholder="" name="description" value="<?= $post['description']?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Song Lyric</label>
-                            <input type="text" class="form-control" id="" placeholder="" name="song_lyric" value="<?= $post['song_lyric']?>" required>
+                            <label>Lyric</label>
+                            <textarea name="song_lyric" class="form-control" id="editor" cols="30" rows="10" required>
+                                <?= $post['song_lyric']?>
+                            </textarea>
                         </div>
                         <div class="form-group">
-                            <label>Type</label>
+                            <label>Phong cách</label>
                             <select name="category_id" id="category_id" class="form-control">
                                 <?php 
                                     foreach ($category as $cate) {
@@ -37,16 +39,16 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Music</label>
+                            <label>Bài nhạc</label>
                             <input type="file" name="music" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>Avatar</label><br>
+                            <label>Poster bài nhạc</label><br>
                             <i style="font-size: 12px">(Bỏ trống nếu không muốn update)</i>
                             <input type="file" name="avatar" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>Singer</label>
+                            <label>Nghệ sĩ</label>
                             <select name="singer_id" id="singer_id" class="form-control">
                                 <?php 
                                     foreach ($singer as $sin) {

@@ -3,30 +3,30 @@
         <div class="content-wrapper">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Add New Post</h4>
+              <h4 class="card-title">Tạo mới</h4>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
                     <a href="?admin=admin&mod=post&act=list" class="btn btn-primary">Quay lại</a>
                     <form action="?admin=admin&mod=post&act=store" method="POST" role="form" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>Tên</label>
                             <input type="text" class="form-control" id="" placeholder="" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label>Description</label>
+                            <label>Mô tả</label>
                             <input type="text" class="form-control" id="" placeholder="" name="description" required>
                         </div>
                         <div class="form-group">
-                            <label>Song Lyric</label>
-                            <input type="text" class="form-control" id="" placeholder="" name="song_lyric" required>
+                            <label>Lyric</label>
+                            <textarea class="form-control" id="editor" placeholder="" name="song_lyric" required></textarea>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" style="display: none">
                             <label>View</label>
-                            <input type="text" class="form-control" id="" placeholder="" name="view" required>
+                            <input type="text" value="1" class="form-control" id="" placeholder="" name="view" required>
                         </div>
                         <div class="form-group">
-                            <label>Type</label>
+                            <label>Phong cách</label>
                             <select name="category_id" id="category_id" class="form-control">
                                 <?php 
                                     foreach ($category as $cate) {
@@ -36,15 +36,15 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Music</label>
+                            <label>Bài nhạc</label>
                             <input type="file" name="music" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>Avatar</label>
+                            <label>Poster bài nhạc</label>
                             <input type="file" name="avatar" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>Singer</label>
+                            <label>Nghệ sĩ</label>
                             <select name="singer_id" id="singer_id" class="form-control">
                                 <?php 
                                     foreach ($singer as $sin) {
@@ -56,7 +56,7 @@
                         <div class="form-group">
                             <input type="text" name="user_id" class="form-control" id="" value="<?= $_SESSION['auth']['id']?>" hidden>
                         </div>
-                        <button type="submit" class="btn btn-primary">EDIT</button>
+                        <button type="submit" class="btn btn-primary">TẠO</button>
                     </form>
                   </div>
                 </div>

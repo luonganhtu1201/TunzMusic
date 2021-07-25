@@ -5,7 +5,7 @@
 			<!-- breadcrumb -->
 			<div class="col-12">
 				<ul class="breadcrumb">
-					<li class="breadcrumb__item"><a href="?admin=client&mod=client&act=cilent">Home</a></li>
+					<li class="breadcrumb__item"><a href="?admin=client&mod=client&act=client">Home</a></li>
 					<li class="breadcrumb__item breadcrumb__item--active">Albums</li>
 				</ul>
 			</div>

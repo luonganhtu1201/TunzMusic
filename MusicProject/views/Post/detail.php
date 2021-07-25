@@ -3,18 +3,18 @@
         <div class="content-wrapper">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Detail Post ---</h4>
+              <h4 class="card-title">Chi tiết bài nhạc ---</h4>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
                     <a href="index.php?admin=admin&mod=post&act=list" class="btn btn-primary">Quay lại</a>
-                    <table class="w-100 table-striped table-dark text-center mt-5">
+                    <table class="w-100 table-striped table-light text-center mt-5">
                         <thead>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Description</th>
+                            <th>Tên</th>
+                            <th>Mô tả</th>
                             <th>Avatar</th>
-                            <th>Music</th>
+                            <th>Bài nhạc</th>
                             <th>Lyric</th>
                         </thead>
                         <tr>

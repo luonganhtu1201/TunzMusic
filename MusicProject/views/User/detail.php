@@ -3,7 +3,7 @@
         <div class="content-wrapper">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Detail User ---</h4>
+              <h4 class="card-title">Chi tiết ---</h4>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
@@ -11,16 +11,16 @@
 			 		<table class="table text-center">
 			 			<thead>
 			                <th>ID</th>
-			                <th>Name</th>
+			                <th>Tên</th>
 			                <th>Email</th>
-			                <th>Avatar</th>
-			                <th>Created At</th>
+			                <th>Ảnh</th>
+			                <th>Ngày đăng kí</th>
 			            </thead>
 			 			<tr>
 			 				<td><?= $user['id'] ?></td>
 			 				<td><?= $user['name'] ?></td>
 			 				<td><?= $user['email'] ?></td>
-			 				<td><?= $user['avatar'] ?></td>
+			 				<td><img src="<?= "public/uploads/".$user['avatar'] ?>" width="100px" height="100px"></td>
 			 				<td><?= $user['created_at'] ?></td>
 			 			</tr>
 			 		</table>

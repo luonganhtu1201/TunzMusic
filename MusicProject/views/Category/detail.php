@@ -3,7 +3,7 @@
         <div class="content-wrapper">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Detail Category ---</h4>
+              <h4 class="card-title">Chi tiết ---</h4>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
@@ -11,10 +11,10 @@
 			 		<table class="table text-center">
 			 			<thead>
 			                <th>ID</th>
-			                <th>Name</th>
+			                <th>Tên</th>
 			                <th>Slug</th>
-			                <th>Description</th>
-			                <th>Created at</th>
+			                <th>Mô tả</th>
+			                <th>Ngày tạo</th>
 			            </thead>
 			 			<tr>
 			 				<td><?= $category['id'] ?></td>

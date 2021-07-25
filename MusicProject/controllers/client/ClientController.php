@@ -15,7 +15,7 @@
 			$this->modelPo = new Post();
 			$this->modelArt = new Article();
 		}
-		function cilent(){
+		function client(){
 			$allMusic = $this->modelSin->list();
 			$arMusic = $this->modelSin->listTop(8,'DESC');
 			$topMusic = $this->modelPo->findPostSingerById(20,'view','>=');

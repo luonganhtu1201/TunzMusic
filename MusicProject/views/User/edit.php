@@ -3,7 +3,7 @@
         <div class="content-wrapper">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Update User ---</h4>
+              <h4 class="card-title">Cập nhật người dùng ---</h4>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
@@ -15,7 +15,7 @@
                             <input type="text" class="form-control" id="" placeholder="" name="id" value="<?= $user['id']?>" disabled>
                         </div>
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>Tên</label>
                             <input type="text" class="form-control" id="" placeholder="" name="name" value="<?= $user['name']?> " required>
                         </div>
                         <div class="form-group">
@@ -23,7 +23,7 @@
                             <input type="email" class="form-control" id="" placeholder="" name="email" value="<?= $user['email']?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
+                            <label>Mật khẩu</label>
                             <input type="password" class="form-control" id="" placeholder="" name="password" value="" required>
                         </div>
                         <div class="form-group">
@@ -32,7 +32,7 @@
                             <input type="file" name="avatar" class="form-control" value="<?= $user['avatar']?>">
                         </div>
                         <div class="form-group">
-                            <label>Permission</label>
+                            <label>Quyền</label>
                             <select class="form-select form-control" aria-label="Default select example" name="permission">
                               <?php 
                               foreach ($users as $us) {
@@ -48,7 +48,7 @@
                         <?php } ?>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">EDIT</button>
+                <button type="submit" class="btn btn-primary">Sửa</button>
             </form>
         </div>
     </div>

@@ -17,34 +17,32 @@
     <div class="content-wrapper">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">SINGER---</h4>
+          <h4 class="card-title">Nghệ sĩ---</h4>
           <div class="row">
             <div class="col-12">
               <div class="table-responsive">                   
-                <a href="?admin=admin&mod=singer&act=create" class="btn btn-primary mb-3">Add New User</a>
+                <a href="?admin=admin&mod=singer&act=create" class="btn btn-primary mb-3">Thêm nghệ sĩ mới</a>
                 <table id="order-listing" class="table text-center">
                     <thead>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Description</th>
+                        <th>Tên</th>
                         <th>Avatar</th>
-                        <th>Action</th>
+                        <th>Hành động</th>
                     </thead>
                     <?php foreach ($singers as $sg) {
                        ?>
                        <tr>
                         <td><?= $sg['id'] ?></td>
                         <td><?= $sg['name'] ?></td>
-                        <td><?= $sg['description'] ?></td>
                         <td>
                             <img src="<?= "public/uploads/".$sg['avatar'] ?>" width="100px" height="100px" style="border-radius: 50%;">
                         </td>
                         <td>
-                            <a href="?admin=admin&mod=singer&act=detail&id=<?= $sg['id'] ?>" class="btn btn-primary">Detail</a>
-                            <a href="?admin=admin&mod=singer&act=edit&id=<?= $sg['id'] ?>" class="btn btn-success">Edit</a>
-                            <a href="?admin=admin&mod=singer&act=delete&id=<?= $sg['id'] ?>" class="btn btn-danger" <?php if ($_SESSION['auth']['permission'] == 0 ) {
-                              echo 'style="display: none;"';
-                          } ?>>Delete</a>
+                            <a href="?admin=admin&mod=singer&act=detail&id=<?= $sg['id'] ?>" class="btn btn-primary">Chi tiết</a>
+                            <a href="?admin=admin&mod=singer&act=edit&id=<?= $sg['id'] ?>" class="btn btn-success">Sửa</a>
+                            <?php if ($_SESSION['auth']['permission'] == 1 ) {
+                              echo '<a href="?admin=admin&mod=singer&act=delete&id='.$sg['id'].'" class="btn btn-danger">Xóa</a>';
+                            } ?>
                       </td>
                   </tr>
               <?php } ?>      

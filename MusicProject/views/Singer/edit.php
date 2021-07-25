@@ -3,7 +3,7 @@
         <div class="content-wrapper">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Update Singer ---</h4>
+              <h4 class="card-title">Cập nhật ---</h4>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
@@ -15,23 +15,23 @@
                             <input type="text" class="form-control" id="" placeholder="" name="id" value="<?= $singer['id']?>" disabled>
                         </div>
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>Nghệ danh</label>
                             <input type="text" class="form-control" id="" placeholder="" name="name" value="<?= $singer['name']?> " required>
                         </div>
                         <div class="form-group">
-                            <label>Description</label>
+                            <label>Mô tả</label>
                             <input type="text" class="form-control" id="" placeholder="" name="description" value="<?= $singer['description']?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Real Name</label>
+                            <label>Tên thật</label>
                             <input type="text" class="form-control" id="" placeholder="" name="real_name" value="<?= $singer['real_name']?>" required>
                         </div>
                         <div class="form-group">
-                            <label>BirthDay</label>
+                            <label>Ngày sinh</label>
                             <input type="date" class="form-control" id="" placeholder="" name="birth" value="<?= $singer['birth']?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Album Information</label>
+                            <label>Thông tin Albums</label>
                             <input type="text" class="form-control" id="" placeholder="" name="album_information" value="<?= $singer['album_information']?>" required>
                         </div>
                         <div class="form-group">
@@ -39,7 +39,7 @@
                             <i style="font-size: 12px">(Bỏ trống nếu không muốn update)</i>
                             <input type="file" name="avatar" class="form-control" value="<?= $singer['avatar']?>">
                         </div>
-                        <button type="submit" class="btn btn-primary">EDIT</button>
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
                     </form>
                   </div>
                 </div>

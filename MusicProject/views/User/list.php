@@ -17,18 +17,18 @@
     <div class="content-wrapper">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">USERS ---</h4>
+          <h4 class="card-title">Người dùng ---</h4>
           <div class="row">
             <div class="col-12">
               <div class="table-responsive">
-                <a href="?admin=admin&mod=user&act=create" class="btn btn-primary mb-3">Add New User</a>
+                <a href="?admin=admin&mod=user&act=create" class="btn btn-primary mb-3">Thêm người dùng mới</a>
                 <table id="order-listing" class="table text-center">
                     <thead>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>Tên</th>
                         <th>Email</th>
-                        <th>Avatar</th>
-                        <th>Action</th>
+                        <th>Ảnh</th>
+                        <th>Hành động</th>
                     </thead>
                     <?php foreach ($users as $us) {
                        ?>
@@ -40,11 +40,11 @@
                             <img src="<?= "public/uploads/".$us['avatar'] ?>" width="100px" height="100px">
                         </td>
                         <td>
-                            <a href="?admin=admin&mod=user&act=detail&id=<?= $us['id'] ?>" class="btn btn-primary">Detail</a>
-                            <a href="?admin=admin&mod=user&act=edit&id=<?= $us['id'] ?>" class="btn btn-success">Edit</a>
+                            <a href="?admin=admin&mod=user&act=detail&id=<?= $us['id'] ?>" class="btn btn-primary">Chi tiết</a>
+                            <a href="?admin=admin&mod=user&act=edit&id=<?= $us['id'] ?>" class="btn btn-success">Sửa</a>
                             <a href="?admin=admin&mod=user&act=delete&id=<?= $us['id'] ?>" class="btn btn-danger" <?php if ($_SESSION['auth']['permission'] == 0 ) {
                               echo 'style="display: none;"';
-                          } ?>>Delete</a>
+                          } ?>>Xóa</a>
                       </td>
                   </tr>
               <?php } ?>      

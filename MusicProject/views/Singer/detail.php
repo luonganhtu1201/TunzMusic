@@ -3,7 +3,7 @@
         <div class="content-wrapper">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Detail Singer ---</h4>
+              <h4 class="card-title">Chi tiết ---</h4>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
@@ -11,16 +11,16 @@
                     <table class="table text-center">
                         <thead>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Description</th>
+                            <th>Tên</th>
+                            <th>Mô tả</th>
                             <th>Avatar</th>
-                            <th>Created At</th>
+                            <th>Ngày tạo</th>
                         </thead>
                         <tr>
                             <td><?= $singer['id'] ?></td>
                             <td><?= $singer['name'] ?></td>
                             <td><?= $singer['description'] ?></td>
-                            <td><?= $singer['avatar'] ?></td>
+                            <td><img src="<?= "public/uploads/".$singer['avatar'] ?>" width="100px" height="100px" style="border-radius: 50%;"></td>
                             <td><?= $singer['created_at'] ?></td>
                         </tr>
                     </table>
